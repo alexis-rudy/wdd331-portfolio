@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-        - name: Deploy
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with: 
           folder: .
