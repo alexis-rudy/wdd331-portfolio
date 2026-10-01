@@ -3,4 +3,8 @@
    not appearance (--blue, --light-gray). */
 :root {
     /* TODO: Define color tokens here */
+    --color-primary: #827081;
+    --color-background: #E7E6F7;
+    --color-text: #AEA3B0;
+    --color-accent: #C6D2ED;
 }
