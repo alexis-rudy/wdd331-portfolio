@@ -3,3 +3,39 @@
    Reference tokens with var(). */
 
 /* TODO: Style body, headings, links, and other base elements */
+body {
+   margin: 0;
+   padding: 0;
+   font-family: var(--font-family);
+}
+
+h1 {
+   font-size: var(--font-large);
+}
+h2 {
+   font-size: clamp(var(--font-medium), 3vw, var(--font-large));
+}
+h3 {
+   font-size: calc(var(--font-small) * 1.2);
+}
+
+p {
+   font-size: var(--font-small);
+}
+
+a {
+   color: var(--color-primary);
+   text-decoration: none;
+
+   &:hover {
+      color: var(--color-accent);
+   }
+}
+
+a,button, input, textarea, select {
+    &:focus-visible {
+        outline: 2px solid var(--color-accent, #f00);
+        outline-offset: 2px;
+        }
+    }
+
