@@ -2,3 +2,19 @@
    Style the active link using aria-current. */
 
 /* TODO: Style the navigation */
+.site-nav {
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+   gap: var(--spacing-medium);
+
+   ul { 
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-medium);
+   }
+   ul li{
+      list-style: none;
+
+   }
+}

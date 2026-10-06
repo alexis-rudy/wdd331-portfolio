@@ -2,3 +2,42 @@
    Use native nesting. Reference tokens with var(). */
 
 /* TODO: Style the card components */
+.card-group {
+   display: flex;
+   background-color: var(--color-background);
+   border-radius: var(--border-radius);
+   /* flex-direction: column; */
+
+   h2 {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      font-size: var(--font-large);
+      text-align: center;
+      background-color: white;
+   }
+}
+
+.card {
+   display: flex;
+   flex-direction: column;
+   border: 1px solid var(--color-border);
+   border-radius: var(--border-radius);
+   padding: var(--spacing-small);
+
+   &:hover {
+      box-shadow: var(--box-shadow);
+   }
+
+   .card-tag {
+      text-align: right;
+      text-transform: uppercase;
+      font-size: calc(var(--font-small) * 0.8);
+   }
+
+   .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: var(--spacing-small);
+   }
+}
