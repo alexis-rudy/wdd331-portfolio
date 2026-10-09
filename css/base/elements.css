@@ -1,48 +1,54 @@
-
-@layer base {
 body {
-    font-family: var(--font-body);
-    color: var(--color-text);
-    background-color: var(--color-bg);
-    line-height: 1.6;
-    padding: var(--space-lg);
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  padding: var(--space-lg);
 }
 
-a { 
-    color: var(--color-primary);
+a {
+  color: var(--color-primary);
 }
 
 a:hover {
-    color: var(--color-primary-hover);
+  color: var(--color-primary-hover);
 }
 
-   h1 {
-        /* fluid font size */
-        font-size: clamp(1.5rem, 5vw, var(--font-title));
-    }
-
-    h2 {
-        /* fluid font size */
-        font-size: clamp(1.25rem, 4vw, var(--font-title));
-    }
-
-    h3 {
-        /* fluid font size */
-        font-size: clamp(1rem, 3vw, var(--font-title));
-    }
-
-    h4 {
-        /* fluid font size */
-        font-size: clamp(0.875rem, 2.5vw, var(--font-title));
-    }
-
-    h5 {
-        /* fluid font size */
-        font-size: clamp(0.75rem, 2vw, var(--font-title));
-    }
-
-    h6 {
-        /* fluid font size */
-        font-size: clamp(0.625rem, 1.5vw, var(--font-title));
-    }
+h1 {
+  /* fluid font size */
+  font-size: clamp(1.5rem, 5vw, var(--font-title));
 }
+
+h2 {
+  /* fluid font size */
+  font-size: clamp(1.25rem, 4vw, var(--font-title));
+}
+
+h3 {
+  /* fluid font size */
+  font-size: clamp(1rem, 3vw, var(--font-title));
+}
+
+h4 {
+  /* fluid font size */
+  font-size: clamp(0.875rem, 2.5vw, var(--font-title));
+}
+
+h5 {
+  /* fluid font size */
+  font-size: clamp(0.75rem, 2vw, var(--font-title));
+}
+
+h6 {
+  /* fluid font size */
+  font-size: clamp(0.625rem, 1.5vw, var(--font-title));
+}
+
+   /* ul { 
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-medium); */
+   ul li{
+      list-style: none;
+
+   }
