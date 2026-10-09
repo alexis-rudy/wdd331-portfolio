@@ -1,3 +1,4 @@
+@layer primary{
 /* Primary page layout: provided for you.
    Focus your work on tokens, base, components, and utilities. */
 
@@ -29,4 +30,5 @@ main {
     width: 100%;
     margin-inline: auto;
     padding: var(--space-lg, 2rem) var(--space-md, 1rem);
+}
 }
