@@ -1,6 +1,13 @@
 {
-	"dependencies": {
-		"lightningcss": "^1.33.0"
+	"packageManager": "pnpm@12.10.1+sha512.ba40a37eb1a370d60fea8c4cf1d364c13bcccef518e98ad2bcee954f539d38da37458e58261a3fa55e06523450ea0ffff9f497b135be41f2c15c1642bacace6c",
+	"devDependencies": {
+		"chokidar-cli": "^3.0.0",
+		"lightningcss-cli": "^1.33.0"
 	},
-	"packageManager": "pnpm@12.10.1+sha512.ba40a37eb1a370d60fea8c4cf1d364c13bcccef518e98ad2bcee954f539d38da37458e58261a3fa55e06523450ea0ffff9f497b135be41f2c15c1642bacace6c"
+	"scripts": {
+		"build": "lightningcss --bundle --minify --targets \">= 0.25%\" css/main.css -o dist/styles.css",
+    	"watch": "chokidar \"css/**/*.css\" -c \"npm run build\" --debounce 600"
+	}
 }
+
+
