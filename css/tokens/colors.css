@@ -1,0 +1,8 @@
+@layer tokens {
+    :root {
+        --background-color: #A4AC86;
+        --text-color: #f2e7d2;
+        --primary-color: #333D29;
+        --accent-color: #656D4A;
+    }
+}

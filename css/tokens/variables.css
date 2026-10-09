@@ -1,0 +1,17 @@
+@layer tokens {
+    :root {
+        /* Spacing: at least sm, md, lg */
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 2rem;
+        /* Typography: font family, base size */
+        --font-family: 'Helvetica', sans-serif;
+        --font-title: 2.5em;
+        --font-body: 1em;
+        /* Line height: for better readability */
+        --line-height: 1.5;
+
+        /* Borders: radius */
+        --border-radius: 0.5rem;
+    }
+}
