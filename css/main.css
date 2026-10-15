@@ -8,9 +8,6 @@
 
 @import url('layout/primary.css') layer(layout);
 
-@import url('components/button.css') layer(components);
-@import url('components/card.css') layer(components);
-@import url('components/nav.css') layer(components);
-@import url('components/footer.css') layer(components);
-@import url('components/header.css') layer(components);
+@import url('components/theme-toggle.css') layer(components);
 
+@import url('utilities/utilities.css') layer(utilities);

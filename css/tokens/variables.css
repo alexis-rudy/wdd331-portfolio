@@ -1,17 +1,38 @@
 @layer tokens {
     :root {
         /* Spacing: at least sm, md, lg */
-        --spacing-sm: 0.5rem;
-        --spacing-md: 1rem;
-        --spacing-lg: 2rem;
+        --spacing-xs: 4px;
+        --spacing-sm: 8px;
+        --spacing-md: 16px;
+        --spacing-lg: 24px;
+        --spacing-xl: 32px;
         /* Typography: font family, base size */
+        --font-family-sans: system-ui, sans-serif;
+        --font-family-mono: monospace;
         --font-family: 'Helvetica', sans-serif;
-        --font-title: 2.5em;
+        --font-size-sm: 1.4rem;
+        --font-size-md: 1.6rem;
+        --font-size-lg: 2rem;
+        --font-title: var(--font-size-lg);
         --font-body: 1em;
+        
         /* Line height: for better readability */
         --line-height: 1.5;
-
+        
         /* Borders: radius */
-        --border-radius: 0.5rem;
+        --border-radius: var(--radius-md);
+        --radius-sm: 4px;
+        --radius-md: 6px;
+        --radius-lg: 8px;
+
+        /* Transitions */
+        --transition-base: 0.2s ease;
+
+        /* Icons */
+        --icon-size-sm: 24px;
+        --icon-size-md: 32px;
+
+        /* Focus */
+        --outline-width: 2px;
     }
 }

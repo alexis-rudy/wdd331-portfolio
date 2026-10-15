@@ -1,8 +1,101 @@
-@layer tokens {
-    :root {
-        --background-color: #A4AC86;
-        --text-color: #f2e7d2;
-        --primary-color: #333D29;
-        --accent-color: #656D4A;
+@layer {
+  :root {
+    color-scheme: light;
+
+    /* Seeds */
+    --seed-bg: #a4ac86;
+    --seed-surface: #ffffff;
+    --seed-text: #f2e7d2;
+    --seed-text-muted: #656d4a;
+    --seed-accent: oklch(37.686% 0.12823 142.511);
+    --seed-accent-hover: color-mix(in oklch, var(--seed-accent) 80%, black);
+    --seed-link: var(--seed-accent);
+    --seed-link-hover: var(--seed-accent-hover);
+    --seed-border: var(--seed-accent);
+    --seed-border-strong: color-mix(in oklch, var(--seed-accent) 60%, black);
+
+    /* Accent ramp */
+    --accent-200: color-mix(in oklch, var(--seed-accent) 30%, white);
+    --accent-300: color-mix(in oklch, var(--seed-accent) 50%, white);
+    --accent-400: color-mix(in oklch, var(--seed-accent) 75%, white);
+    --accent-500: var(--seed-accent);
+    --accent-600: color-mix(in oklch, var(--seed-accent) 80%, black);
+    --accent-700: color-mix(in oklch, var(--seed-accent) 60%, black);
+    --accent-800: color-mix(in oklch, var(--seed-accent) 40%, black);
+  }
+
+  :root,
+  html {
+    /* Semantic tokens */
+    --color-bg: light-dark(var(--seed-bg), oklch(0.18 0.04 125));
+    --color-surface: light-dark(var(--seed-surface), oklch(0.24 0.04 125));
+    --color-text: light-dark(var(--seed-text), oklch(0.92 0.05 85));
+    --color-text-muted: light-dark(
+      var(--seed-text-muted),
+      oklch(0.75 0.08 110)
+    );
+    --color-accent: light-dark(var(--seed-accent), oklch(0.78 0.12 110));
+    --color-link: light-dark(var(--seed-link), oklch(0.84 0.12 110));
+    --color-link-hover: light-dark(var(--seed-link-hover), oklch(0.93 0.1 105));
+    --color-border: light-dark(var(--seed-border), oklch(0.48 0.08 110));
+    --color-border-strong: light-dark(
+      var(--seed-border-strong),
+      oklch(0.65 0.1 110)
+    );
+    --color-primary: var(--color-link);
+    --color-primary-hover: var(--color-link-hover);
+
+    /* Tint the native checkboxes, radios, and range sliders */
+    accent-color: var(--color-accent);
+
+    /* Header chrome */
+    --header-bg: var(--color-surface);
+    --header-text: light-dark(#ffffff, oklch(0.92 0.05 85));
+
+    /* Theme toggle (consumed by theme-toggle.css) */
+    --theme-toggle-bg: color-mix(
+      in srgb,
+      var(--header-text) 10%,
+      var(--header-bg)
+    );
+    --theme-toggle-bg-hover: color-mix(
+      in srgb,
+      var(--header-text) 20%,
+      var(--header-bg)
+    );
+    --theme-toggle-border: color-mix(
+      in srgb,
+      var(--header-text) 30%,
+      var(--header-bg)
+    );
+    --theme-toggle-border-hover: color-mix(
+      in srgb,
+      var(--header-text) 50%,
+      var(--header-bg)
+    );
+
+    /* Shadows */
+    --shadow-color: light-dark(rgb(0 0 0 / 0.2), rgb(0 0 0 / 0.28));
+    --shadow-sm: 0 1px 2px var(--shadow-color);
+    --shadow-md: 0 4px 6px var(--shadow-color);
+
+    /* Legacy aliases */
+    --background-color: var(--color-bg);
+    --text-color: var(--color-text);
+    --primary-color: var(--color-link);
+    --accent-color: var(--color-accent);
+  }
+
+      /* Switch to dark mode */
+    html:has(input[name="theme-preference"][value="dark"]:checked) {
+      color-scheme: dark;
     }
+
+    /* User chose system and OS is dark */
+    @media (prefers-color-scheme: dark) {
+      html:has(input[name="theme-preference"][value="system"]:checked) {
+        color-scheme: dark;
+      }
+    }
+
 }
