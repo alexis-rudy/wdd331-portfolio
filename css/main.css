@@ -14,3 +14,5 @@
 @import url('components/footer.css') layer(components);
 @import url('components/header.css') layer(components);
 @import url('components/theme-toggle.css') layer(components);
+
+@import url('utilities/utilities.css') layer(utilities);
