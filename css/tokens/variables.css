@@ -37,8 +37,8 @@
 
     /* Level 1 (buttons, inputs, etc.) */
     --shadow-level-1:
-      0 1px 2px oklch(0.2 0 0 / 0.1), 
-      0 2px 4px oklch(0.2 0 0 / 0.06);
+      0 1px 3px oklch(0.1 0 0 / 0.5),
+      4px 2px 4px oklch(0.2 0 0 / 0.06);
     /* Level 2 (cards, containers, etc.) */
     --shadow-level-2:
       0 2px 4px oklch(0.2 0 0 / 0.1), 
