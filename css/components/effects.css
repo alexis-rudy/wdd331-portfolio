@@ -127,3 +127,11 @@ body {
     }
   }
 }
+.icon-section {
+    .icon-row {
+        background-color: var(--color-surface);
+        .icon-item {
+            filter: drop-shadow(2px 4px 6px rgba(218, 18, 18, 0.3));
+        }
+    }
+}
