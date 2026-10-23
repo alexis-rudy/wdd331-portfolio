@@ -6,6 +6,22 @@ body {
   padding: var(--space-lg);
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: var(--spacing-medium);
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-medium);
+  }
+  ul li {
+    list-style: none;
+  }
+}
+
 a {
   color: var(--color-primary);
 }
@@ -43,24 +59,24 @@ h6 {
   /* fluid font size */
   font-size: clamp(0.625rem, 1.5vw, var(--font-title));
 }
-
-   /* ul { 
-      display: flex;
-      justify-content: center;
-      gap: var(--spacing-medium); */
-   ul li{
-      list-style: none;
-
-   }
+ul li {
+  list-style: none;
+}
 
 .card {
-   display: flex;
-   flex-direction: column;
-   border: 1px solid var(--color-border);
-   border-radius: var(--border-radius);
-   padding: var(--spacing-small);
-
-   &:hover {
-      box-shadow: var(--box-shadow);
-   }
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-small);
+  box-shadow: var(--shadow-level-2);
+  img {
+    /* width: 100%; */
+    height: auto;
+    border-radius: var(--border-radius);
   }
+
+  &:hover {
+    box-shadow: var(--box-shadow);
+  }
+}

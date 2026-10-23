@@ -36,7 +36,7 @@ main {
   flex-direction: row;
   gap: var(--spacing-lg);
   align-content: center;
-  
+
   .introduction {
     align-self: center;
     transform: rotate(-2deg);
@@ -59,5 +59,115 @@ main {
         }
       }
     }
+  }
+}
+
+/* Visual effects layout */
+.effects-body {
+  background-color: var(--color-background);
+  color: contrast-color(var(--color-background));
+  .hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    .hero-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .hero-content {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      padding-right: var(--spacing-lg);
+      color: black;
+
+      h1 {
+        text-shadow: var(--shadow-level-1);
+        font-size: calc(var(--font-title) * 1.5);
+      }
+      p {
+        text-shadow: var(--shadow-level-1);
+        font-size: var(--font-size-sm);
+      }
+    }
+  }
+  nav {
+    a {
+      text-decoration: none;
+    }
+    ul {
+      display: flex;
+      gap: var(--spacing-sm);
+    }
+  }
+  main {
+    section {
+      padding: var(--spacing-lg) 0;
+    }
+    .card-section {
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: clamp(1rem, 2.5vw, 3rem);
+        /* padding: var(--spacing-lg); */
+        .card {
+          .card-body {
+            padding: var(--spacing-md);
+          }
+        }
+      }
+    }
+    .glass-section {
+      position: relative;
+      min-height: 400px;
+      overflow: hidden;
+      .glass-background {
+        width: 100%;
+        height: 100%;
+        .glass-bg-image{
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .glass-panel {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: var(--spacing-md);}
+
+    }
+      .icon-section {
+        .icon-row {
+          display: flex;
+          justify-content: center;
+        }
+        .icon-item {
+          width: var(--icon-size-lg);
+          height: var(--icon-size-lg);
+        }
+      }
+      .arrow-section {
+        display: flex;
+        flex-direction: column;
+        background-color: red;
+        gap: var(--spacing-sm);
+        text-align: left;
+        color: contrast-color(var(--color-surface));
+        padding: var(--spacing-lg);
+        margin: 0 var(--spacing-md);
+      }
   }
 }
