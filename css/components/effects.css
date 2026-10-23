@@ -84,16 +84,16 @@
   }
   .card:nth-child(1) {
     &:hover {
-      img {
-        filter: brightness(1.2) contrast(1.2);
-      }
+      box-shadow: var(--shadow-level-4);
     }
   }
   .card:nth-child(2) {
     &:hover {
-      img {
-        filter: grayscale(100%);
-      }
+      background: linear-gradient(
+        to right,
+        rgb(255, 0, 0, 0.2),
+        rgb(255, 165, 0, 0.7)
+      );
     }
   }
   .card:nth-child(3) {
@@ -126,9 +126,13 @@
 }
 .icon-section {
     .icon-row {
-        background-color: var(--color-surface);
+        display: flex;
+        justify-content: center;
+        /* background-color: var(--color-surface); */
         .icon-item {
-            filter: drop-shadow(2px 4px 6px rgba(218, 18, 18, 0.3));
+            width: var(--icon-size-lg);
+            height: var(--icon-size-lg);
+            filter: drop-shadow(2px 4px 6px rgba(256, 256, 256, 0.3));
         }
     }
 }
