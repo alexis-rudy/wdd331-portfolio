@@ -1,22 +1,22 @@
 body {
-    background-color: #5bbc60;
+  background-color: #5bbc60;
+  text-align: center;
 }
 .mask {
-    mask-image: linear-gradient(
+  /* -webkit-mask-image: linear-gradient(
         to bottom,
-        black 0%,
-        rgba(0, 0, 0, 0.5) 50%,
+        black 50%,
         transparent 100%
-    )
+    ) */
   /* mask-image: repeating-linear-gradient(
     to bottom right,
     red 0 50px,
     #ff000055 50px 100px,
     transparent 100px 160px
   ); */
-  /* mask-image: url("https://mdn.github.io/shared-assets/images/examples/colorful-heart.png");
+  mask-image: url("https://mdn.github.io/shared-assets/images/examples/colorful-heart.png");
   mask-repeat:no-repeat;
   mask-position: center;
+  mask-size: contain;
   mask-mode: luminance;
-  mask-size: cover; */
 }
