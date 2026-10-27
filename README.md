@@ -72,3 +72,6 @@ Open `index.html` or one of the unit pages in a browser to view the site locally
 - [Custom Properties and Nesting](unit-1/custom-properties/index.html)
 - [Layered Components](unit-2/layered-components/index.html)
 - [Effects](unit-3/visual-effects/index.html)
+- Grid Layouts
+    - [Cards](unit-4/grid-layouts/cards.html)
+    - [Editorial](unit-4/grid-layouts/editorial.html)
