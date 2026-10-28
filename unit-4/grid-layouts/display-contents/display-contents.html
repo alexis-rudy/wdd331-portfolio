@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Display Contents Demo</title>
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="display-contents.css" />
+  </head>
+  <body class="contents-demo-page">
+    <header>
+      <p class="eyebrow">Grid layout lesson</p>
+      <h1><code>display: contents</code></h1>
+      <p>
+        Compare a wrapper that creates its own grid item with one whose children
+        join the parent grid.
+      </p>
+    </header>
+
+    <main>
+      <div class="demo-grid">
+        <section class="demo-panel">
+          <div class="panel-heading">
+            <p class="eyebrow">Without contents</p>
+            <h2>The wrapper is a grid item</h2>
+          </div>
+          <div class="example-grid">
+            <div class="wrapper">
+              <article class="example-card">
+                <span>01</span>
+                <h3>Nested card</h3>
+                <p>The wrapper owns this grid cell.</p>
+              </article>
+              <article class="example-card">
+                <span>02</span>
+                <h3>Nested card</h3>
+                <p>These cards stay inside it.</p>
+              </article>
+            </div>
+          </div>
+          <p class="code-note"><code>.wrapper { display: block; }</code></p>
+        </section>
+
+        <section class="demo-panel highlighted">
+          <div class="panel-heading">
+            <p class="eyebrow">With contents</p>
+            <h2>The children join the grid</h2>
+          </div>
+          <div class="example-grid">
+            <div class="wrapper">
+              <article class="example-card">
+                <span>01</span>
+                <h3>Grid item</h3>
+                <p>The wrapper has no layout box.</p>
+              </article>
+              <article class="example-card">
+                <span>02</span>
+                <h3>Grid item</h3>
+                <p>Both cards use parent tracks.</p>
+              </article>
+            </div>
+          </div>
+          <p class="code-note"><code>.wrapper { display: contents; }</code></p>
+        </section>
+      </div>
+
+      <aside class="teaching-note">
+        <strong>Teaching point:</strong>
+        <code>display: contents</code> removes the wrapper's box, not its
+        markup. Use it carefully because some accessibility and styling
+        behaviors can change when an element has no box.
+      </aside>
+    </main>
+  </body>
+</html>
