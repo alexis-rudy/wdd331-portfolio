@@ -67,6 +67,11 @@
 .card {
     padding: var(--spacing-md);
     box-shadow: var(--shadow-md);
+    position: relative;
+    a {
+        position: absolute;
+        bottom: 0;
+    }
 }
 .card div:nth-child(1) {
     height: 200px;
