@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Position Demo</title>
+    <link rel="stylesheet" href="sticky-demo.css" />
+    <!-- <link rel="stylesheet" href="/css/main.css" /> -->
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#">Position / 01</a>
+        <span class="header-label">A long page for a sticky demo</span>
+      </div>
+    </header>
+
+    <main>
+      <header class="page-intro">
+        <p class="eyebrow">Advanced CSS · Unit 04</p>
+        <h1>Stay close to the scroll.</h1>
+        <p class="lede">
+          This page is intentionally long. Scroll through the guide to see the
+          header and table of contents remain visible while the article moves
+          underneath them.
+        </p>
+      </header>
+
+      <div class="layout">
+        <nav class="contents" aria-label="On this page">
+          <ol>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#flow">Normal flow</a></li>
+            <li><a href="#offset">Offset and boundaries</a></li>
+            <li><a href="#patterns">Useful patterns</a></li>
+            <li><a href="#recap">Recap</a></li>
+          </ol>
+        </nav>
+
+        <article>
+          <section class="story-section" id="overview">
+            <p class="section-number">01 / Overview</p>
+            <h2>Sticky is a meeting point between two positioning modes.</h2>
+            <p>
+              An element with <code>position: sticky</code> behaves like a
+              normally positioned element until it reaches an offset threshold.
+              It then holds its place in the viewport while its scroll container
+              still has room for it.
+            </p>
+            <p>
+              Unlike a fixed element, a sticky element keeps its place in the
+              document. That makes it useful for navigation, headings, filters,
+              and context that should stay available without floating forever.
+            </p>
+            <div class="callout">
+              <p>
+                <strong>Try it:</strong> Keep scrolling and notice how this
+                contents panel stops before it can escape the article.
+              </p>
+            </div>
+          </section>
+
+          <section class="story-section" id="flow">
+            <p class="section-number">02 / Normal flow</p>
+            <h2>Start with the layout you would build without sticky.</h2>
+            <p>
+              Sticky positioning works best when the surrounding layout already
+              expresses the relationship between the side content and the main
+              content. This demo uses a two-column grid: the navigation is one
+              grid item and the article is the other.
+            </p>
+            <h3>The container matters</h3>
+            <p>
+              The sticky item is constrained by its nearest scrolling ancestor.
+              As the article reaches the end of its grid area, the navigation
+              moves away instead of overlapping the footer or leaving the page.
+            </p>
+            <div class="demo-card">
+              <p>Two columns, one long article, and a navigation panel with a job to do.</p>
+            </div>
+          </section>
+
+          <section class="story-section" id="offset">
+            <p class="section-number">03 / Offset and boundaries</p>
+            <h2>A small offset creates a comfortable reading rhythm.</h2>
+            <p>
+              The declaration <code>top: 6.5rem</code> gives the table of
+              contents a safe landing spot below the persistent site header.
+              Without an offset, the browser has no threshold at which the
+              sticky behavior should begin.
+            </p>
+            <p>
+              The same idea applies to section headings. Each anchor target
+              includes a scroll margin so a link jump does not hide the heading
+              behind the header. These small details make the interaction feel
+              intentional rather than merely technically correct.
+            </p>
+            <h3>Give the browser room to work</h3>
+            <p>
+              A sticky element needs enough scrollable space in its containing
+              block. Grid and flex alignment can also affect the available
+              height, so inspect the parent whenever a sticky element appears
+              not to move.
+            </p>
+          </section>
+
+          <section class="story-section" id="patterns">
+            <p class="section-number">04 / Useful patterns</p>
+            <h2>Use sticky to preserve context, not to decorate.</h2>
+            <p>
+              A sticky subheading can label a long list, a filter bar can remain
+              available while results change, and a documentation menu can show
+              where a reader is in a larger guide. Each pattern answers the
+              same question: what information is useful while the user moves?
+            </p>
+            <ul>
+              <li>Keep the sticky surface visually distinct from scrolling content.</li>
+              <li>Use a clear offset when another header is already sticky.</li>
+              <li>Test narrow screens, where a side panel may become a compact row.</li>
+              <li>Check focus states and keyboard navigation after anchor jumps.</li>
+            </ul>
+            <div class="callout">
+              <p>
+                Good sticky UI reduces memory load: the reader does not have to
+                scroll back just to recover context.
+              </p>
+            </div>
+          </section>
+
+          <section class="story-section" id="recap">
+            <p class="section-number">05 / Recap</p>
+            <h2>One property, a lot of useful continuity.</h2>
+            <p>
+              This page is long enough to make scrolling observable, but every
+              section still has a focused purpose. The header uses
+              <code>position: sticky</code> at the top of the viewport, while
+              the navigation uses its own offset inside the article layout.
+            </p>
+            <p>
+              Resize the window to see the layout become a single column. The
+              navigation remains sticky, but its links wrap into a compact row
+              so the content stays readable on smaller screens.
+            </p>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <p>End of demo · Keep exploring the page to see where sticky stops.</p>
+    </footer>
+  </body>
+</html>
