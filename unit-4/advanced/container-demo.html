@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Container Query Card Demo</title>
+    <link rel="stylesheet" href="container-demo.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+  </head>
+  <body class="container-demo">
+    <header class="page-header">
+      <p class="eyebrow">Container queries</p>
+      <h1>One card, two contexts</h1>
+      <p>
+        The same article card adapts to the space available from its parent, not
+        the size of the viewport.
+      </p>
+    </header>
+
+    <main class="layout-preview">
+      <section class="moon-card card" aria-labelledby="sidebar-title">
+        <div class="moon"></div>
+        <!-- <div class="card-container"> -->
+          <article class="article-card">
+            <div class="card-content">
+              <p class="card-kicker">Layout technique</p>
+              <h3>Designing with container queries</h3>
+              <p class="card-summary">
+                Build components that respond to their own surroundings.
+              </p>
+            </div>
+          </article>
+        <!-- </div> -->
+      </section>
+    </main>
+  </body>
+</html>

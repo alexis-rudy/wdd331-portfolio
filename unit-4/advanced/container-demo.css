@@ -1,0 +1,52 @@
+body {
+  background-color: black;
+}
+.moon-card {
+  container: main / inline-size;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+}
+.moon {
+  width: 100%;
+  height: 25vh;
+  clip-path: circle(30% at 0% 80%);
+  filter: drop-shadow(0 0 10px rgb(255 246 214 / 0.7))
+    drop-shadow(0 0 28px rgb(255 246 214 / 0.35));
+  background:
+    radial-gradient(
+      ellipse at 75% 50%,
+      rgb(35 33 32 / 0.35) 0 18%,
+      transparent 48%
+    ),
+    radial-gradient(
+      circle at 35% 30%,
+      #c9c4bc 0,
+      #9d9891 42%,
+      #716d69 78%,
+      #4e4a47 100%
+    );
+  box-shadow:
+    0 2px 4px oklch(0.2 0 0 / 0.1),
+    0 6px 12px oklch(0.2 0 0 / 0.07),
+    0 16px 32px oklch(0.2 0 0 / 0.05),
+    0 0 22px rgb(255 246 214 / 0.6),
+    0 0 52px rgb(255 246 214 / 0.32),
+    0 0 90px rgb(255 246 214 / 0.14),
+    inset -12px -8px 18px rgb(36 34 33 / 0.35),
+    inset 8px 6px 14px rgb(255 255 255 / 0.18),
+    inset -20px 0 22px rgb(20 19 18 / 0.2);
+}
+.card-content {
+  padding: 1rem;
+}
+@container main (min-width: 600px) {
+  .card-container {
+    position: relative;
+    z-index: 1;
+  }
+  .moon {
+    clip-path: circle(40% at 50% 50%);
+    position: relative;
+    z-index: 2;
+  }
+}
