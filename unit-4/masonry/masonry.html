@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS Grid Masonry Demo</title>
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="masonry.css" />
+    <script src="masonry.js"></script>
+
+  </head>
+  <body class="masonry-demo-page">
+    <header class="page-header">
+      <p class="eyebrow">CSS Grid layout lesson</p>
+      <h1>Masonry with CSS Grid</h1>
+      <p>
+        Compare a regular grid with a row-spanning grid that packs
+        variable-height cards into the available space.
+      </p>
+    </header>
+
+    <main>
+      <div class="demo-grid">
+        <section class="demo-panel" aria-labelledby="standard-grid-title">
+          <div class="panel-heading">
+            <p class="eyebrow">The problem</p>
+            <h2 id="standard-grid-title">Standard CSS Grid leaves gaps</h2>
+            <p>
+              Each row is sized by its tallest card, so shorter cards cannot
+              move up into the empty space below them.
+            </p>
+          </div>
+
+          <div class="standard-grid" aria-label="Standard grid with gaps">
+            <article class="card card-short">
+              <span>01</span>
+              <h3>Short card</h3>
+              <p>One line of content.</p>
+            </article>
+            <article class="card card-tall">
+              <span>02</span>
+              <h3>Tall card</h3>
+              <p>
+                This longer card determines the height of the first row. The
+                neighboring short card cannot fill the resulting empty area.
+              </p>
+            </article>
+            <article class="card card-medium">
+              <span>03</span>
+              <h3>Medium card</h3>
+              <p>Its next row starts below the tallest card above.</p>
+            </article>
+            <article class="card card-short">
+              <span>04</span>
+              <h3>Short card</h3>
+              <p>More unused space appears here.</p>
+            </article>
+          </div>
+
+          <p class="code-note"><code>grid-template-columns: repeat(2, 1fr)</code></p>
+        </section>
+
+        <section class="demo-panel highlighted" aria-labelledby="masonry-grid-title">
+          <div class="panel-heading">
+            <p class="eyebrow">The CSS Grid approach</p>
+            <h2 id="masonry-grid-title">Pack cards with row spans</h2>
+            <p>
+              A small auto-row creates the masonry rhythm. Each card spans the
+              number of rows needed for its content.
+            </p>
+          </div>
+
+          <div class="masonry-grid" aria-label="Packed CSS Grid masonry layout">
+            <article class="card card-short" style="--row-span: 13">
+              <span>01</span>
+              <h3>Short card</h3>
+              <p>One line of content.</p>
+            </article>
+            <article class="card card-tall" style="--row-span: 23">
+              <span>02</span>
+              <h3>Tall card</h3>
+              <p>
+                This card spans more grid rows, allowing the next card in its
+                column to start as soon as the space is available.
+              </p>
+            </article>
+            <article class="card card-medium" style="--row-span: 18">
+              <span>03</span>
+              <h3>Medium card</h3>
+              <p>It occupies only the rows its content needs.</p>
+            </article>
+            <article class="card card-short" style="--row-span: 13">
+              <span>04</span>
+              <h3>Short card</h3>
+              <p>This card packs below the first one.</p>
+            </article>
+            <article class="card card-medium" style="--row-span: 18">
+              <span>05</span>
+              <h3>Another card</h3>
+              <p>Explicit spans keep the layout responsive and gap-free.</p>
+            </article>
+          </div>
+
+          <p class="code-note">
+            <code>grid-row: span var(--row-span)</code>
+          </p>
+        </section>
+
+        <section class="demo-panel js-panel" aria-labelledby="js-masonry-title">
+          <div class="panel-heading">
+            <p class="eyebrow">The JavaScript approach</p>
+            <h2 id="js-masonry-title">Measure cards at runtime</h2>
+            <p>
+              JavaScript reads each card's height and calculates the exact row
+              span. Resize the browser to see the layout recalculate.
+            </p>
+          </div>
+
+          <div class="js-masonry-grid" aria-label="JavaScript masonry layout">
+            <article class="js-masonry-card card-short card">
+              <span>01</span>
+              <h3>Measured card</h3>
+              <p>The script measures this content.</p>
+            </article>
+            <article class="js-masonry-card card-tall card">
+              <span>02</span>
+              <h3>Variable height</h3>
+              <p>
+                This card has more content, so JavaScript gives it a larger
+                row span automatically.
+              </p>
+            </article>
+            <article class="js-masonry-card card-medium card">
+              <span>03</span>
+              <h3>Responsive result</h3>
+              <p>Its span updates when the column width changes.</p>
+            </article>
+            <article class="js-masonry-card card-short card">
+              <span>04</span>
+              <h3>One calculation</h3>
+              <p>The browser does not need hard-coded content sizes.</p>
+            </article>
+            <article class="js-masonry-card card-medium card">
+              <span>05</span>
+              <h3>New content</h3>
+              <p>
+                Add or edit content and the ResizeObserver recalculates the
+                placement.
+              </p>
+            </article>
+          </div>
+
+          <p class="code-note">
+            <code>grid-row: span calculateRows(card)</code>
+          </p>
+        </section>
+      </div>
+
+      <aside class="teaching-note">
+        <strong>Teaching point:</strong>
+        CSS Grid does not automatically create masonry in this pattern. The
+        CSS example uses deliberate spans, while the JavaScript example
+        measures each card and calculates those spans whenever its size
+        changes.
+      </aside>
+    </main>
+  </body>
+</html>
