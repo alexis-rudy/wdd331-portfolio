@@ -1,0 +1,31 @@
+.card {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+.card-short {
+  height: 100px;
+}
+.card-medium {
+  height: 150px;
+}
+.card-tall {
+  height: 200px;
+}
+.standard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.masonry-grid {
+  column-count: 3;
+  column-gap: 1rem;
+  .card {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+}
+.js-masonry-grid .js-masonry-card {
+    width: 200px;
+}
