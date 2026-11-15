@@ -6,18 +6,53 @@
     --spacing-md: 16px;
     --spacing-lg: 24px;
     --spacing-xl: 32px;
-    /* Typography: font family, base size */
+    /* Typography: font family and major-third (1.25) type scale */
     --font-family-sans: system-ui, sans-serif;
     --font-family-mono: monospace;
     --font-family: "Helvetica", sans-serif;
-    --font-size-sm: 1.4rem;
-    --font-size-md: 1.6rem;
-    --font-size-lg: 2rem;
-    --font-title: var(--font-size-lg);
-    --font-body: 1em;
+    --font-family-body: var(--font-family);
+    --font-family-heading: "Space Grotesk", var(--font-family-sans);
+    --font-size-1: 0.512rem;
+    --font-size-2: 0.64rem;
+    --font-size-3: 0.8rem;
+    --font-size-4: 1rem;
+    /* Fluid range: 320px to 1280px */
+    --font-size-5: clamp(1.125rem, calc(0.625vw + 1rem), 1.5rem);
+    --font-size-6: clamp(1.25rem, calc(1.25vw + 1rem), 2rem);
+    --font-size-7: clamp(1.5rem, calc(1.5vw + 1.2rem), 2.4rem);
+    --font-size-8: clamp(2rem, calc(2.5vw + 1.5rem), 3.5rem);
 
-    /* Line height: for better readability */
-    --line-height: 1.5;
+    /* Line height: open for body text, tighter for display sizes */
+    --line-height-1: 1.5;
+    --line-height-2: 1.5;
+    --line-height-3: 1.5;
+    --line-height-4: 1.55;
+    --line-height-5: 1.4;
+    --line-height-6: 1.3;
+    --line-height-7: 1.2;
+    --line-height-8: 1.1;
+
+    /* Semantic typography roles */
+    --font-size-supporting: var(--font-size-3);
+    --font-size-body: var(--font-size-4);
+    --font-size-subheading: var(--font-size-5);
+    --font-size-heading: var(--font-size-6);
+    --font-size-title: var(--font-size-7);
+    --font-size-display: var(--font-size-8);
+    --line-height-supporting: var(--line-height-3);
+    --line-height-body: var(--line-height-4);
+    --line-height-subheading: var(--line-height-5);
+    --line-height-heading: var(--line-height-6);
+    --line-height-title: var(--line-height-7);
+    --line-height-display: var(--line-height-8);
+
+    /* Legacy aliases */
+    --font-size-sm: var(--font-size-supporting);
+    --font-size-md: var(--font-size-body);
+    --font-size-lg: var(--font-size-title);
+    --font-title: var(--font-size-display);
+    --font-body: var(--font-size-body);
+    --line-height: var(--line-height-4);
 
     /* Borders: radius */
     --border-radius: var(--radius-md);
