@@ -26,8 +26,9 @@ The project is a static HTML and CSS site. Source styles are organized by respon
 ├── css/                               # Shared source styles for the portfolio
 │   ├── base/                          # Element styles and CSS reset
 │   ├── layout/                        # Page layout styles
-│   ├── tokens/                        # Colors and reusable variables
+│   ├── tokens/                        # Colors and typography variables
 │   └── main.css                       # Shared stylesheet entry point
+├── fonts/                             # Self-hosted web fonts
 ├── dist/
 │   └── styles.css                     # Generated, bundled, and minified CSS
 ├── package.json                       # Build scripts and development dependencies
@@ -37,6 +38,10 @@ The project is a static HTML and CSS site. Source styles are organized by respon
 ```
 
 The `css/main.css` file is the entry point for the shared stylesheet. It imports the base, token, and layout styles. The generated file in `dist/` is the stylesheet used by the site after the build completes.
+
+## Typography
+
+The numeric type scale, semantic typography roles, line heights, and font-family tokens live in [`css/tokens/variables.css`](css/tokens/variables.css). Headings use the self-hosted **Space Grotesk** font from [`fonts/space-grotesk-600.woff2`](fonts/space-grotesk-600.woff2), with a system sans-serif fallback and `font-display: swap`.
 
 ## Build Tool
 

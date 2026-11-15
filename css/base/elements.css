@@ -1,8 +1,9 @@
 body {
-  font-family: var(--font-body);
+  font-family: var(--font-family-body);
   color: var(--color-text);
   background-color: var(--color-bg);
-  line-height: 1.6;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
   padding: var(--space-lg);
 }
 
@@ -31,33 +32,48 @@ a:hover {
 }
 
 h1 {
-  /* fluid font size */
-  font-size: clamp(1.5rem, 5vw, var(--font-title));
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-display);
 }
 
 h2 {
-  /* fluid font size */
-  font-size: clamp(1.25rem, 4vw, var(--font-title));
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-title);
+  line-height: var(--line-height-title);
 }
 
 h3 {
-  /* fluid font size */
-  font-size: clamp(1rem, 3vw, var(--font-title));
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-heading);
+  line-height: var(--line-height-heading);
 }
 
 h4 {
-  /* fluid font size */
-  font-size: clamp(0.875rem, 2.5vw, var(--font-title));
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-subheading);
+  line-height: var(--line-height-subheading);
 }
 
 h5 {
-  /* fluid font size */
-  font-size: clamp(0.75rem, 2vw, var(--font-title));
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
 }
 
 h6 {
-  /* fluid font size */
-  font-size: clamp(0.625rem, 1.5vw, var(--font-title));
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-supporting);
+  line-height: var(--line-height-supporting);
+}
+
+small,
+figcaption,
+caption,
+.caption,
+.eyebrow {
+  font-size: var(--font-size-supporting);
+  line-height: var(--line-height-supporting);
 }
 ul li {
   list-style: none;
