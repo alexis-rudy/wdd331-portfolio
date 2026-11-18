@@ -30,3 +30,7 @@
 .js-masonry-grid .js-masonry-card {
     width: 200px;
 }
+.js-masonry-card {
+  height: auto;
+  min-height: 100px;
+}
