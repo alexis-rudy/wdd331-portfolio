@@ -7,11 +7,12 @@ body {
   padding: var(--space-lg);
 }
 
-nav {
-  display: flex;
+ nav {
+  text-align: center;
+  /* display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: var(--spacing-medium);
+  gap: var(--spacing-medium);*/
 
   ul {
     display: flex;
