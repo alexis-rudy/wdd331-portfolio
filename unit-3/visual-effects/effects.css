@@ -1,0 +1,21 @@
+.card:nth-child(1) {
+  &:hover {
+    box-shadow: var(--shadow-level-4);
+  }
+}
+.card:nth-child(2) {
+  &:hover {
+    background: linear-gradient(
+      to right,
+      rgb(255, 0, 0, 0.2),
+      rgb(255, 165, 0, 0.7)
+    );
+  }
+}
+.card:nth-child(3) {
+  &:hover {
+    img {
+      filter: sepia(100%);
+    }
+  }
+}
