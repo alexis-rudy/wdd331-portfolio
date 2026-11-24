@@ -1,4 +1,37 @@
 body {
-    background-color: #f0f0f0;
-    color: #333;
+  background-color: #f0f0f0;
+  color: #333;
+}
+.actions {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--spacing-large);
+  margin: var(--spacing-md) 0;
+  .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  grid-template-rows: repeat(4, fit-content);
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+}
+@supports (grid-template-rows: subgrid) {
+  .card-grid .card {
+    display: grid;
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+  }
+}
+.card-tag {
+    padding: calc(var(--spacing-sm) / 4) ;
+    border-radius: calc(var(--border-radius) * 5);
+    border: 1px solid #0056b3;
+}
+nav a {
+    
 }

@@ -59,6 +59,7 @@
 }
 @supports (grid-template-rows: subgrid) {
     .card-grid .card {
+        display: grid;
         grid-row: span 4;
         grid-template-rows: subgrid;
     }
