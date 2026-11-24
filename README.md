@@ -81,3 +81,5 @@ Open `index.html` or one of the unit pages in a browser to view the site locally
     - [Cards](unit-4/grid-layouts/cards.html)
     - [Editorial](unit-4/grid-layouts/editorial.html)
     - [Display Contents](unit-4/grid-layouts/display-contents.html)
+- [Print](unit-5/print/index.html)
+- [Motion and Animation](unit-5/index.html)
