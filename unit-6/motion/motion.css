@@ -4,30 +4,33 @@ body {
   nav {
     text-align: right;
     margin: var(--spacing-md);
-        a {
-            text-decoration: none;
-        }
-      a:not([class]) {
-        text-decoration: none;
-        background-image: linear-gradient(currentColor, currentColor);
-        background-repeat: no-repeat;
-        background-position: 0 100%;
-        background-size: 0% 1px;
-        transition: background-size 200ms linear;
-      }
+    a {
+      text-decoration: none;
+    }
+    a:not([class]) {
+      text-decoration: none;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      background-size: 0% 1px;
+      transition: background-size 200ms linear;
+    }
 
-      a:hover,
-      a:focus-visible {
-        background-size: 100% 1px;
-      }
-      .nav-cta {
-        background-color: var(--color-primary);
-        color: var(--color-bg);
-        padding: var(--spacing-sm) var(--spacing-md);
-        border: 1px solid var(--color-primary);
-        border-radius: var(--border-radius);
-        color: contrast-color(var(--color-primary));
-        transition: background-color 200ms ease-out, color 200ms ease-out;
+    a:hover,
+    a:focus-visible {
+      background-size: 100% 1px;
+    }
+    .nav-cta {
+      background-color: var(--color-primary);
+      color: var(--color-bg);
+      padding: var(--spacing-sm) var(--spacing-md);
+      border: 1px solid var(--color-primary);
+      border-radius: var(--border-radius);
+      color: contrast-color(var(--color-primary));
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          background-color 200ms ease-out,
+          color 200ms ease-out;
         &:hover,
         &:focus-visible {
           background-color: transparent;
@@ -36,6 +39,19 @@ body {
       }
     }
   }
+}
+.status {
+  .status-badge {
+    @media (prefers-reduced-motion: reduce) {
+        font-weight: bold;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      display: inline-block;
+      animation: pulse 5s ease-in-out infinite;
+      color: green;
+    }
+  }
+}
 .actions {
   display: flex;
   justify-content: space-around;
@@ -46,6 +62,45 @@ body {
     font-size: 16px;
     cursor: pointer;
   }
+  @media (prefers-reduced-motion: no-preference) {
+    .btn-primary {
+    transition-property: background-color, transform, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus-visible {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0) scale(0.99);
+  }
+
+  .btn-secondary {
+    transition-property: background-color, border-color, transform;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+  }
+
+  .btn-secondary:hover,
+  .btn-secondary:focus-visible {
+    transform: translateY(-1.5px);
+  }
+
+  .btn-ghost {
+    transition-property: background-color, color, opacity;
+    transition-duration: 180ms;
+    transition-timing-function: ease-in-out;
+  }
+
+  .btn-ghost:hover,
+  .btn-ghost:focus-visible {
+    opacity: 0.85;
+  }
+}
 }
 .card-grid {
   display: grid;
@@ -61,17 +116,49 @@ body {
     grid-template-rows: subgrid;
   }
 }
+.card {
+  @media (prefers-reduced-motion: no-preference) {
+    transition: transform 300ms ease-in;
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-4px);
+    }
+  }
+}
 .card-tag {
   padding: calc(var(--spacing-sm) / 4);
   border-radius: calc(var(--border-radius) * 5);
   border: 1px solid #0056b3;
 }
-
-@keyframes underline {
-  from {
-    border-bottom: 0;
+.card-link {
+  text-decoration: none;
+  @media (prefers-reduced-motion: no-preference) {
+    &:hover,
+    &:focus-visible {
+      animation: bounce 1000ms ease-in infinite;
+    }
   }
-  to {
-    border-bottom: 3px solid var(--color-primary);
+}
+@keyframes bounce {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
   }
 }
