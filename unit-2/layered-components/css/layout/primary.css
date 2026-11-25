@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--font-family, sans-serif);
-    font-size: var(--font-size, 1rem);
+    font-size: var(--font-small);
 }
 
 main {
@@ -14,19 +14,19 @@ main {
     max-width: 64rem;
     width: 100%;
     margin-inline: auto;
-    padding-inline: var(--space-md, 1rem);
+    padding-inline: var(--spacing-medium);
 }
 
 .page-header {
     max-width: 64rem;
     width: 100%;
     margin-inline: auto;
-    padding: var(--space-lg, 2rem) var(--space-md, 1rem);
+    padding: var(--spacing-large) var(--spacing-medium);
 }
 
 .page-footer {
     max-width: 64rem;
     width: 100%;
     margin-inline: auto;
-    padding: var(--space-lg, 2rem) var(--space-md, 1rem);
+    padding: var(--spacing-large) var(--spacing-medium);
 }

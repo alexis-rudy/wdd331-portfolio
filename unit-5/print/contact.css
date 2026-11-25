@@ -1,0 +1,45 @@
+:root {
+  accent-color: var(--color-accent);
+}
+header {
+    text-align: center;
+    padding: var(--spacing-md);
+}
+form {
+  border: 3px solid var(--seed-text-muted);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  padding: 1rem;
+  background-color: var(--seed-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  color: black;
+  font-size: var(--font-size-body);
+  fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  textarea {
+    font-size: var(--font-size-body);
+    @supports (field-sizing: content) {
+      field-sizing: content;
+    }
+    min-height: 3lh;
+    max-height: 10lh;
+  }
+  button {
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-5);
+    width: 50%;
+    margin: 0 auto;
+    &:hover {
+      cursor: pointer;
+      box-shadow: var(--shadow-level-1);
+    }
+  }
+}

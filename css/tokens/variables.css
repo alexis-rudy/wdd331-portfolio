@@ -12,8 +12,6 @@
     --font-family: "Helvetica", sans-serif;
     --font-family-body: var(--font-family);
     --font-family-heading: "Space Grotesk", var(--font-family-sans);
-    --font-size-1: 0.512rem;
-    --font-size-2: 0.64rem;
     --font-size-3: 0.8rem;
     --font-size-4: 1rem;
     /* Fluid range: 320px to 1280px */
@@ -23,8 +21,6 @@
     --font-size-8: clamp(2rem, calc(2.5vw + 1.5rem), 3.5rem);
 
     /* Line height: open for body text, tighter for display sizes */
-    --line-height-1: 1.5;
-    --line-height-2: 1.5;
     --line-height-3: 1.5;
     --line-height-4: 1.55;
     --line-height-5: 1.4;
@@ -46,16 +42,7 @@
     --line-height-title: var(--line-height-7);
     --line-height-display: var(--line-height-8);
 
-    /* Legacy aliases */
-    --font-size-sm: var(--font-size-supporting);
-    --font-size-md: var(--font-size-body);
-    --font-size-lg: var(--font-size-title);
-    --font-title: var(--font-size-display);
-    --font-body: var(--font-size-body);
-    --line-height: var(--line-height-4);
-
     /* Borders: radius */
-    --border-radius: var(--radius-md);
     --radius-sm: 4px;
     --radius-md: 6px;
     --radius-lg: 8px;
