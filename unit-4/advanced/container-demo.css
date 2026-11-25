@@ -4,7 +4,7 @@ body {
 .moon-card {
   container: main / inline-size;
   border: 1px solid #ccc;
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-md);
 }
 .moon {
   width: 100%;

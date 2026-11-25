@@ -13,7 +13,7 @@ body {
   font-family: var(--font-family-body);
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
-  background-color: var(--background-color);
+  background-color: var(--color-bg);
 }
 
 main {
@@ -21,21 +21,21 @@ main {
   max-width: 64rem;
   width: 100%;
   margin-inline: auto;
-  padding-inline: var(--space-md, 1rem);
+  padding-inline: var(--spacing-md);
 }
 
 .page-header {
   max-width: 64rem;
   width: 100%;
   margin-inline: auto;
-  padding: var(--space-lg, 2rem) var(--space-md, 1rem);
+  padding: var(--spacing-xl) var(--spacing-md);
 }
 
 .page-footer {
   max-width: 64rem;
   width: 100%;
   margin-inline: auto;
-  padding: var(--space-lg, 2rem) var(--space-md, 1rem);
+  padding: var(--spacing-xl) var(--spacing-md);
 }
 
 /* Landing page layout */
@@ -73,8 +73,8 @@ main {
 
 /* Visual effects layout */
 .effects-body {
-  background-color: var(--color-background);
-  color: contrast-color(var(--color-background));
+  background-color: var(--color-bg);
+  color: contrast-color(var(--color-bg));
   .hero {
     position: relative;
     overflow: hidden;

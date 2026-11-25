@@ -17,7 +17,7 @@
       border-radius: var(--border-radius);
       padding: var(--spacing-large);
       font-family: var(--font-family);
-      font-size: var(--font-size);
+      font-size: var(--font-small);
    }
    .btn:not(:disabled) {
       cursor: pointer;

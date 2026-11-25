@@ -4,7 +4,7 @@ body {
   background-color: var(--color-bg);
   font-size: var(--font-size-body);
   line-height: var(--line-height-body);
-  padding: var(--space-lg);
+  padding: var(--spacing-lg);
 }
 
  nav {
@@ -25,11 +25,11 @@ body {
 }
 
 a {
-  color: var(--color-primary);
+  color: var(--color-link);
 }
 
 a:hover {
-  color: var(--color-primary-hover);
+  color: var(--color-link-hover);
 }
 
 h1 {
@@ -84,17 +84,17 @@ ul li {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--color-border);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius-md);
   padding: var(--spacing-md);
   box-shadow: var(--shadow-level-2);
   img {
     /* width: 100%; */
     height: auto;
-    border-radius: var(--border-radius);
+    border-radius: var(--radius-md);
   }
 
   &:hover {
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--shadow-level-3);
   }
 }
 @supports (grid-template-rows: subgrid) {
