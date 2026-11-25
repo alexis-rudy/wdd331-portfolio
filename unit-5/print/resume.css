@@ -1,7 +1,68 @@
+body {
+    background-color: aliceblue;
+    color: #333;
+}
 header { 
     text-align: center;
 }
-.project {
-    display: flex;
-    gap: var(--spacing-2);
+.education {
+    text-align: center;
+}
+.project,
+.experience {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: var(--spacing-md);
+
+    .title {
+        border-right: 3px solid var(--color-border);
+        padding: var(--spacing-md);
+    }
+    .feature-list{
+        margin: var(--spacing-sm);
+        li{
+            list-style: disc;
+
+        }
+    }
+}
+
+@media print {
+    @page {
+        margin: 0.6in;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 10pt;
+        line-height: 1.35;
+        orphans: 3;
+        widows: 3;
+    }
+
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        overflow-wrap: anywhere;
+    }
+
+    .project,
+    .experience {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    h1,
+    h2,
+    h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    p,
+    li {
+        orphans: 3;
+        widows: 3;
+    }
 }
