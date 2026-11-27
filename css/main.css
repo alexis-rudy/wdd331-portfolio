@@ -1,5 +1,6 @@
 @layer tokens, base, layout, components, utilities;
 
+@import url('view-transitions.css');
 @import url('tokens/colors.css') layer(tokens);
 @import url('tokens/variables.css') layer(tokens);
 

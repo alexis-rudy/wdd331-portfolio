@@ -162,3 +162,19 @@ body {
     opacity: 1;
   }
 }
+
+.archived {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.card[hidden] {
+  display: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-group(project-card-grid) {
+    animation-duration: 500ms;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
