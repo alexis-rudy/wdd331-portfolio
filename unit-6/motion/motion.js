@@ -36,7 +36,20 @@ archiveButton.addEventListener("click", () => {
     typeof document.startViewTransition === "function" &&
     !window.matchMedia("(prefers-reduced-motion: reduce)").matches
   ) {
-    document.startViewTransition(updateCards);
+    const root = document.documentElement;
+    const clearTransitionClass = () => {
+      root.classList.remove("archive-toggle-transition");
+    };
+
+    root.classList.add("archive-toggle-transition");
+    let transition;
+    try {
+      transition = document.startViewTransition(updateCards);
+    } catch (error) {
+      clearTransitionClass();
+      throw error;
+    }
+    transition.finished.then(clearTransitionClass, clearTransitionClass);
   } else {
     updateCards();
   }
