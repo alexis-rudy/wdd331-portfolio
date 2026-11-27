@@ -173,6 +173,12 @@ body {
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  html.archive-toggle-transition::view-transition-group(root),
+  html.archive-toggle-transition::view-transition-old(root),
+  html.archive-toggle-transition::view-transition-new(root) {
+    animation: none;
+  }
+
   ::view-transition-group(project-card-grid) {
     animation-duration: 500ms;
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
