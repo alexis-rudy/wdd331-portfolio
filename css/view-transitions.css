@@ -1,0 +1,25 @@
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(root) {
+    animation: fade-in-right 500ms ease-in-out forwards;
+  }
+
+  ::view-transition-new(root) {
+    animation: fade-in-left 500ms ease-in-out forwards;
+  }
+}
+
+@keyframes fade-in-right {
+  to {
+    translate: -100% 0;
+  }
+}
+
+@keyframes fade-in-left {
+  to {
+    translate: 100% 0;
+  }
+}

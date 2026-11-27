@@ -33,11 +33,11 @@
 
         <section class="actions">
             <button class="btn btn-primary" type="button">New Project</button>
-            <button class="btn btn-secondary" type="button">View Archive</button>
+            <button class="btn btn-secondary" type="button" aria-controls="project-cards" aria-pressed="false">View Archive</button>
             <button class="btn btn-ghost" type="button">Export Data</button>
         </section>
 
-        <section class="card-grid">
+        <section class="card-grid" id="project-cards">
 
             <article class="card">
                 <div class="card-header">
@@ -84,9 +84,18 @@
                 <a href="../../unit-3/visual-effects/index.html" class="card-link">View work &rarr;</a>
             </article>
 
-            <article class="card">
+            <article class="card archived">
                 <div class="card-header">
-                    <h2>Portfolio</h2>
+                    <h2>Display</h2>
+                    <span class="card-tag card-tag--pending">Up Next</span>
+                </div>
+                <p>Capstone project showcasing the full toolkit built throughout this course.</p>
+                <a href="../../index.html" class="card-link">View work &rarr;</a>
+            </article>
+
+            <article class="card archived">
+                <div class="card-header">
+                    <h2>Display</h2>
                     <span class="card-tag card-tag--pending">Up Next</span>
                 </div>
                 <p>Capstone project showcasing the full toolkit built throughout this course.</p>
@@ -96,6 +105,6 @@
         </section>
 
     </main>
-
+<script src="motion.js"></script>
 </body>
 </html>
